@@ -17,8 +17,11 @@ import {
   SiAmazonwebservices,
   SiGooglecloud,
   SiTerraform,
+  SiPython,
+  SiBootstrap,
+  SiExpress,
 } from 'react-icons/si';
-
+import { FaJava } from "react-icons/fa";
 const skillLogos = [
   {
     icon: <SiHtml5 title="Html5" />,
@@ -33,24 +36,12 @@ const skillLogos = [
     label: 'JavaScript',
   },
   {
-    icon: <SiTypescript title="TypeScript" />,
-    label: 'TypeScript',
-  },
-  {
     icon: <SiGit title="Git" />,
     label: 'Git',
   },
   {
     icon: <SiReact title="React" />,
     label: 'React',
-  },
-  {
-    icon: <SiRedux title="Redux" />,
-    label: 'Redux',
-  },
-  {
-    icon: <SiNextdotjs title="NextJS" />,
-    label: 'NextJS',
   },
   {
     icon: <SiNodedotjs title="Node" />,
@@ -65,32 +56,32 @@ const skillLogos = [
     label: 'MongoDB',
   },
   {
-    icon: <SiFirebase title="Firebase" />,
-    label: 'Firebase',
-  },
-  {
-    icon: <SiJest title="Jest" />,
-    label: 'Jest',
-  },
-  {
-    icon: <SiTailwindcss title="Tailwind CSS" />,
-    label: 'Tailwind CSS',
-  },
-  {
     icon: <SiMui title="Material UI" />,
     label: 'Material UI',
   },
   {
-    icon: <SiTerraform title="Terraform" />,
-    label: 'Terraform',
+    icon: <SiPython title="Python" />,
+    label: 'Python',
+  },
+  // {
+  //   icon: <SiJava title="Java" />,
+  //   label: 'Java',
+  // },
+  {
+    icon: <SiExpress title="Express.js" />,
+    label: 'Express.js',
   },
   {
-    icon: <SiAmazonwebservices title="Amazon Web Services" />,
-    label: 'Amazon Web Services',
+    icon: <SiBootstrap title="Bootstrap" />,
+    label: 'Bootstrap',
   },
   {
-    icon: <SiGooglecloud title="Google Cloud" />,
-    label: 'Google Cloud',
+    icon: <SiRedux title="Data Structures and Algorithms" />,
+    label: 'Data Structures and Algorithms',
+  },
+  {
+    icon: <FaJava title="Java" />,
+    label: 'Java',
   },
 ];
 

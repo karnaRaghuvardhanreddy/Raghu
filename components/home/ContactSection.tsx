@@ -18,10 +18,10 @@ import {
 
 import ShortCenteredDivider from '../ui/ShortCenteredDivider';
 import Link from '../Link';
-import EmailSuccessMessage from '../EmailSuccessMessage';
 import profilePicture from '../../public/profile-picture.jpg';
-
 import socialIcons from './constants/socialIcons';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
 
 interface ContactData {
   title: string;
@@ -49,12 +49,7 @@ interface ContactFormFields {
   message: string;
 }
 
-export default function Contact({
-  contactData: t,
-}: {
-  contactData: ContactData;
-}) {
-  const [displayMessage, setDisplayMessage] = useState(false);
+export default function Contact({ contactData: t }: { contactData: ContactData }) {
   const [senderFirstName, setSenderFirstName] = useState('');
 
   const initialValues: ContactFormFields = {
@@ -67,29 +62,38 @@ export default function Contact({
   const validationSchema = Yup.object({
     firstName: Yup.string().required(t.requiredErrorMessage),
     lastName: Yup.string().required(t.requiredErrorMessage),
-    email: Yup.string()
-      .email(t.invalidEmailErrorMessage)
-      .required(t.requiredErrorMessage),
+    email: Yup.string().email(t.invalidEmailErrorMessage).required(t.requiredErrorMessage),
   });
 
   const onSubmit = async (
     values: ContactFormFields,
     onSubmitProps: FormikHelpers<ContactFormFields>
   ) => {
-    await fetch('/api/mail', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        firstName: values.firstName,
-        lastName: values.lastName,
-        email: values.email,
-        message: values.message,
-      }),
-    });
+    try {
+      const response = await fetch('/api/mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: values.firstName,
+          lastName: values.lastName,
+          email: values.email,
+          message: values.message,
+        }),
+      });
 
-    setSenderFirstName(values.firstName);
-    onSubmitProps.resetForm();
-    setDisplayMessage(true);
+      if (!response.ok) {
+        throw new Error('Error sending email');
+      }
+
+      // Success Toast
+      toast.success(`Message sent successfully, ${values.firstName}!`);
+
+      setSenderFirstName(values.firstName);
+      onSubmitProps.resetForm();
+    } catch (error) {
+      // Error Toast
+      toast.error('There was an error sending your message. Please try again.');
+    }
   };
 
   const formik = useFormik({
@@ -98,8 +102,7 @@ export default function Contact({
     validationSchema,
   });
 
-  const { errors, touched, values, handleChange, handleSubmit, getFieldProps } =
-    formik;
+  const { errors, touched, values, handleChange, handleSubmit, getFieldProps } = formik;
 
   return (
     <Box component="section" id="contact" sx={{ pb: 8, pt: 10 }}>
@@ -112,13 +115,7 @@ export default function Contact({
 
         <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
           <Avatar sx={{ width: 96, height: 96 }}>
-            <Image
-              alt="Kelvin Sánchez"
-              height={160}
-              placeholder="blur"
-              src={profilePicture}
-              width={160}
-            />
+            <Image alt="Kelvin Sánchez" height={160} placeholder="blur" src={profilePicture} width={160} />
           </Avatar>
         </Box>
 
@@ -138,13 +135,7 @@ export default function Contact({
           <Divider />
 
           <CardContent>
-            <Typography
-              gutterBottom
-              align="center"
-              color="textPrimary"
-              component="p"
-              variant="body1"
-            >
+            <Typography gutterBottom align="center" color="textPrimary" component="p" variant="body1">
               {t.subtitle}
             </Typography>
 
@@ -159,12 +150,8 @@ export default function Contact({
                   size="large"
                   sx={{
                     fill: (theme) => theme.palette.common.white,
-                    '&:hover': {
-                      fill: (theme) => theme.palette.primary.main,
-                    },
-                    '&:focus': {
-                      fill: (theme) => theme.palette.primary.main,
-                    },
+                    '&:hover': { fill: (theme) => theme.palette.primary.main },
+                    '&:focus': { fill: (theme) => theme.palette.primary.main },
                   }}
                   target="_blank"
                 >
@@ -191,9 +178,7 @@ export default function Contact({
                 variant="outlined"
                 {...getFieldProps('firstName')}
                 error={Boolean(errors.firstName) && Boolean(touched.firstName)}
-                helperText={
-                  touched.firstName && errors.firstName ? errors.firstName : ' '
-                }
+                helperText={touched.firstName && errors.firstName ? errors.firstName : ' '}
               />
             </Grid>
 
@@ -207,9 +192,7 @@ export default function Contact({
                 variant="outlined"
                 {...getFieldProps('lastName')}
                 error={Boolean(errors.lastName) && Boolean(touched.lastName)}
-                helperText={
-                  touched.lastName && errors.lastName ? errors.lastName : ' '
-                }
+                helperText={touched.lastName && errors.lastName ? errors.lastName : ' '}
               />
             </Grid>
 
@@ -246,25 +229,15 @@ export default function Contact({
             </Grid>
 
             <Grid item xs={12}>
-              <Button
-                fullWidth
-                color="primary"
-                size="large"
-                sx={{ mt: 1 }}
-                type="submit"
-                variant="contained"
-              >
+              <Button fullWidth color="primary" size="large" sx={{ mt: 1 }} type="submit" variant="contained">
                 {t.submitButton}
               </Button>
             </Grid>
           </Grid>
         </form>
 
-        <EmailSuccessMessage
-          displayMessage={displayMessage}
-          senderFirstName={senderFirstName}
-          setDisplayMessage={setDisplayMessage}
-        />
+        <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+
       </Container>
     </Box>
   );

@@ -85,8 +85,6 @@ export default function Portfolio({
                       width={600}
                     />
                   </div>
-
-                  {/* Overlay */}
                   <Box
                     sx={{
                       position: 'absolute',
@@ -95,7 +93,7 @@ export default function Portfolio({
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      backgroundColor: 'rgba(0, 0, 0, 0.7);',
+                      backgroundColor: 'rgba(0, 0, 0, 0.7)',
                       opacity: 0,
                       transition: 'all 0.3s ease-in-out',
                       '&:hover': {
@@ -114,16 +112,27 @@ export default function Portfolio({
                       >
                         Repo
                       </Button>
-                      <Button
-                        aria-label="Link to project live preview"
-                        component="a"
-                        href={project.projectUrl}
-                        rel="noopener"
-                        startIcon={<Visibility />}
-                        target="_blank"
-                      >
-                        Live
-                      </Button>
+                      {project.projectUrl ? (
+                        <Button
+                          aria-label="Link to project live preview"
+                          component="a"
+                          href={project.projectUrl}
+                          rel="noopener"
+                          startIcon={<Visibility />}
+                          target="_blank"
+                        >
+                          Live
+                        </Button>
+                      ) : (
+                        <Button
+                          aria-label="No live preview available"
+                          disabled
+                          startIcon={<Visibility />}
+                          sx={{ visibility: 'hidden' }}
+                        >
+                          Live
+                        </Button>
+                      )}
                     </ButtonGroup>
                   </Box>
                 </Box>

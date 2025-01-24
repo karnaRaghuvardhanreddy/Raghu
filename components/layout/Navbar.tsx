@@ -64,11 +64,6 @@ export default function ElevateAppBar() {
       icon: <WorkIcon />,
     },
     {
-      link: '/#blog',
-      name: 'BLOG',
-      icon: <AssignmentIcon />,
-    },
-    {
       link: '/#contact',
       name: `${router.locale === 'en' ? 'CONTACT' : 'CONTACTO'}`,
       icon: <MailIcon />,
@@ -104,7 +99,7 @@ export default function ElevateAppBar() {
                 </AnimatedLink>
               ))}
 
-              <LanguageSelector />
+              {/* <LanguageSelector /> */}
 
               <IconButton
                 aria-label="Open Navigation"

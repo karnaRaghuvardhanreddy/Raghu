@@ -6,64 +6,24 @@
     "work": "Work Experience"
   },
   "basics": {
-    "email": "kelvinsanchez15@gmail.com",
-    "name": "Kelvin Sanchez",
+    "email": "karnaraghuvardhanreddy@gmail.com",
+    "name": "Karna Raghuvardhan Reddy",
     "location": {
-      "address": "Spring, Texas"
+      "address": "Guntur, Andhra Pradesh"
     },
-    "website": "www.kelvinsanchez15.com"
+    "website": "https://github.com/karnaraghuvardhanreddy"
   },
-  "education": [],
-  "work": [
+  "education": [
     {
-      "company": "Research Improving People's Lives",
-      "position": "Senior Software Engineer",
-      "location": "Spring, Texas",
-      "startDate": "Feb 2023",
-      "endDate": "Present",
-      "highlights": [
-        "Led frontend architecture and crafted custom UX solutions to enhance user engagement and streamline workflows",
-        "Built interactive dashboards with geospatial insights to transform complex public safety data into actionable visuals",
-        "Developed secure, scalable cloud infrastructure to ensure reliable performance and protect sensitive research data"
-      ]
-    },
-    {
-      "company": "Xepelin",
-      "position": "Front-end Developer",
-      "location": "Spring, Texas",
-      "startDate": "Oct 2021",
-      "endDate": "Feb 2023",
-      "highlights": [
-        "Built a new onboarding flow, improving self-enrolled users by 33%",
-        "Developed high business impact components, such as the Credit Line widget and a scalable Navbar",
-        "Pioneered the implementation of Typescript and Unit testing, improving overall application trust"
-      ]
-    },
-    {
-      "company": "alacartadigital",
-      "position": "Full Stack Developer",
-      "location": "Spring, Texas",
-      "startDate": "Apr 2021",
-      "endDate": "Sep 2022",
-      "highlights": [
-        "Implemented features such as yearly subscriptions and multiple restaurants per user, increasing company revenue by 40%",
-        "Optimized Lighthouse metrics by 98, achieving a smoother user experience and significant SEO improvements",
-        "Responsible for maintaining and deploying the platform using Next.js, Redux, and Firebase as the primary technology stack"
-      ]
-    },
-    {
-      "position": "Front-end Developer",
-      "startDate": "Ene 2019",
-      "endDate": "Dec 2020",
-      "highlights": [
-        "In charge of improving the company website and maintaining the design system",
-        "Optimized the app for maximum speed and scalability",
-        "Created features to enhance the user experience"
-      ],
-      "company": "PETUCA",
-      "location": "Ciudad Bolívar, Venezuela"
+      "institution": "Vasireddy Venkatadri Institute of Technology",
+      "area": "Computer Science and Engineering",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2021",
+      "endDate": "2025",
+      "gpa": "8.5"
     }
   ],
+  "work": [],
   "skills": [
     {
       "level": "",
@@ -71,70 +31,59 @@
         "HTML",
         "CSS",
         "JavaScript",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "Redux"
+        "Node.js",
+        "REST API"
       ],
-      "name": "Frontend"
+      "name": "Web Development"
     },
     {
-      "keywords": ["Python", "FastAPI", "Node.js"],
-      "name": "Backend"
+      "keywords": ["Python", "Java", "Data Structures (Advanced)", "C"],
+      "name": "Programming Languages"
     },
     {
-      "keywords": ["PostgreSQL", "MongoDB", "Firebase"],
+      "keywords": ["SQL", "MongoDB"],
       "name": "Databases"
     },
     {
-      "keywords": ["Terraform", "Amazon Web Services", "Google Cloud"],
-      "name": "Infrastructure"
-    },
-    {
-      "keywords": ["Tailwind CSS", "Material UI", "Bootstrap"],
-      "name": "CSS frameworks"
-    },
-    {
-      "keywords": ["Jest", "Cypress"],
-      "name": "Testing"
-    },
-    {
-      "keywords": ["Git", "Figma", "Postman"],
-      "name": "Other"
+      "keywords": ["ReactJS", "ExpressJS", "Bootstrap"],
+      "name": "Frameworks"
     }
   ],
   "projects": [
     {
-      "description": "Arkansas Skills-Based Candidate Matching Tool",
-      "url": "https://employer.launch.arkansas.gov/",
-      "keywords": ["React", "Next.js", "Typescript", "Jest"],
-      "name": "LAUNCH for Employers"
+      "description": "Developed a full-stack Airbnb clone using HTML, CSS, Bootstrap, JavaScript, Node.js, Express, MongoDB, and EJS. Implemented MVC architecture for scalability and clean code. Features include user authentication, property listings, booking system, reviews, and deployment.",
+      "name": "Wanderlust"
     },
     {
-      "description": "Public Safety Data for Village of Hazel Crest",
-      "url": "https://hazelcrest.dataforcommunitytrust.org/",
-      "keywords": ["Terraform", "AWS", "React", "Next.js"],
-      "name": "Data for Community Trust"
+      "description": "Created a simple weather application using React.js and Material-UI. Users can input a city name and click search to retrieve current weather details for that location. Utilized Material-UI components for a modern and responsive user interface.",
+      "name": "Weather App"
     },
     {
-      "description": "Certified Payroll Collection and Analysis Tool",
-      "url": "https://njwages.nj.gov/",
-      "keywords": ["React", "Next.js", "Typescript", "Material UI", "Zod"],
-      "name": "New Jersey Wage Hub"
-    },
-    {
-      "description": "Online restaurant menu platform with QR code integration.",
-      "url": "https://avocaty.io/",
-      "keywords": ["React", "Next.js", "Material UI", "Firebase", "Stripe"],
-      "name": "alacartadigital"
+      "description": "Developed a fully functional clone of the Zerodha trading platform using the MERN stack. Implemented features such as user authentication, real-time stock data visualization, portfolio management, and order placement. Ensured a seamless and responsive user experience with dynamic UI/UX design principles. Integrated RESTful APIs for fetching live market data and used MongoDB for efficient data storage and retrieval.",
+      "name": "Zerodha Clone"
     }
   ],
   "awards": [
     {
-      "title": "",
+      "title": "TCS Codevita S12 - Global Rank 205",
       "date": "",
       "awarder": "",
       "summary": ""
+    },
+    {
+      "title": "Solved 1000+ problems on different coding platforms",
+      "date": "",
+      "awarder": "LeetCode, GeeksforGeeks"
+    },
+    {
+      "title": "Certifications in Data Structures and Algorithms",
+      "date": "",
+      "awarder": "NPTEL"
+    },
+    {
+      "title": "MERN Stack Certification",
+      "date": "",
+      "awarder": "Apna College"
     }
   ],
   "sections": [
