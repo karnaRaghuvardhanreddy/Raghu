@@ -81,7 +81,7 @@ export default function Portfolio({
                       height={370}
                       layout="responsive"
                       placeholder="blur"
-                      src={`/${project.imgPath}`}
+                      src={project.imgPath}
                       width={600}
                     />
                   </div>
