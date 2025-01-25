@@ -7,7 +7,7 @@ const nextConfig = {
     defaultLocale: 'en',
   },
   images: {
-    domains: ['www.freecodecamp.org'],
+     domains: ['res.cloudinary.com'],
   },
 };
 
