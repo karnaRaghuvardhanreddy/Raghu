@@ -5,8 +5,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    unoptimized:true,
-    domains: ['www.freecodecamp.org'],
+    unoptimized: true,
+    domains: ['www.freecodecamp.org', 'res.cloudinary.com'],  // Merge both domains in a single array
   },
   basePath: isProduction ? '/Portfolio' : '',
   assetPrefix: isProduction ? '/Portfolio/' : '',
