@@ -8,8 +8,8 @@ const nextConfig = {
     unoptimized: true,
     domains: ['www.freecodecamp.org', 'res.cloudinary.com'],  // Merge both domains in a single array
   },
-  basePath: isProduction ? '/Portfolio' : '',
-  assetPrefix: isProduction ? '/Portfolio/' : '',
+  basePath: isProduction ? '/Raghu' : '',
+  assetPrefix: isProduction ? '/Raghu/' : '',
 };
 
 module.exports = nextConfig;
