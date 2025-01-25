@@ -20,7 +20,7 @@ import { useRouter } from 'next/router';
 
 import Link from '../Link';
 import AnimatedLink from '../AnimatedLink';
-import LanguageSelector from '../LanguageSelector';
+
 
 import NavigationDrawer from './NavigationDrawer';
 
@@ -50,22 +50,22 @@ export default function ElevateAppBar() {
   const menuItems = [
     {
       link: '/#',
-      name: `${router.locale === 'en' ? 'HOME' : 'INICIO'}`,
+      name: 'HOME',
       icon: <HomeIcon />,
     },
     {
       link: '/#about',
-      name: `${router.locale === 'en' ? 'ABOUT' : 'ACERCA DE MI'}`,
+      name:  'ABOUT' ,
       icon: <PermIdentityIcon />,
     },
     {
       link: '/#portfolio',
-      name: `${router.locale === 'en' ? 'PORTFOLIO' : 'PORTAFOLIO'}`,
+      name: 'PORTFOLIO' ,
       icon: <WorkIcon />,
     },
     {
       link: '/#contact',
-      name: `${router.locale === 'en' ? 'CONTACT' : 'CONTACTO'}`,
+      name: 'CONTACT',
       icon: <MailIcon />,
     },
   ];

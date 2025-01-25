@@ -1,9 +1,9 @@
 {
   "defaultSeo": {
     "title": "Karna raghuvardhan Reddy | Aspiring  Software Engineer",
-    "description": "Kelvin Sanchez is a Senior Software Engineer, experienced in creating beautiful and functional websites and web applications.",
-    "url": "https://www.kelvinsanchez15.com/",
-    "previewImage": "https://user-images.githubusercontent.com/4708484/93688063-050a8980-fa91-11ea-89ca-3530a9038393.png"
+    "url":"",
+    "previewImage":"https://res.cloudinary.com/dhabhmp9t/image/upload/v1737799285/profile-picture_bsyuxu.jpg",
+    "description": "Karna Raghuvardhan  is a Aspiring Software Engineer, practising  in creating beautiful and functional websites and web applications."
   },
   "heroData": {
     "greetings": "HELLO, ",
@@ -24,7 +24,7 @@
     "resumeTitle": "Resumé",
     "resumeParagraph": "You can check my resumé in the link below.",
     "resumeButton": "Resumé",
-    "resumeLink": "/resume/resume-en.pdf",
+    "resumeLink": "https://drive.google.com/file/d/1BM1Z88KG61gJBw6y96pm1UgHYf-G_c_Q/view?usp=drivesdk",
     "skillsTitle": "Skills"
   },
   "portfolioData": {
@@ -34,7 +34,7 @@
     "name": "Wanderlust",
     "projectUrl": "https://projectwebdevelopment.onrender.com/listings",
     "repoUrl": "https://github.com/karnaRaghuvardhanreddy/ProjectWebdev",
-    "imgPath": "projectMedia/wanderlust.jpg",
+    "imgPath": "https://res.cloudinary.com/dhabhmp9t/image/upload/v1737798900/Screenshot_308_oiojc2.png",
     "imgAlt": "Wanderlust site preview",
     "summary": "A full-stack Airbnb clone featuring property listings, booking system, and reviews.",
     "keyFeatures": [
@@ -49,7 +49,7 @@
     "name": "Weather App",
     "projectUrl": "",
     "repoUrl": "https://github.com/karnaRaghuvardhanreddy/Weather_App",
-    "imgPath": "projectMedia/weatherapp.jpg",
+    "imgPath": "https://res.cloudinary.com/dhabhmp9t/image/upload/v1737799183/weatherapp_khcuyy.jpg",
     "imgAlt": "Weather App preview",
     "summary": "A weather application providing real-time updates with a modern and responsive UI.",
     "keyFeatures": [
@@ -63,7 +63,7 @@
     "name": "Zerodha Clone",
     "projectUrl": "",
     "repoUrl": "https://github.com/karnaRaghuvardhanreddy/Zerodha_Clone",
-    "imgPath": "projectMedia/zerodhaclone.jpg",
+    "imgPath": "https://res.cloudinary.com/dhabhmp9t/image/upload/v1737799152/Screenshot_309_ly99tn.png",
     "imgAlt": "Zerodha Clone preview",
     "summary": "A full-stack trading platform clone inspired by Zerodha.",
     "keyFeatures": [

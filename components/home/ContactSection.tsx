@@ -2,6 +2,8 @@ import Image from 'next/legacy/image';
 import { useState } from 'react';
 import { useFormik, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
 import {
   Box,
   Container,
@@ -16,12 +18,12 @@ import {
   Avatar,
 } from '@mui/material';
 
+
 import ShortCenteredDivider from '../ui/ShortCenteredDivider';
 import Link from '../Link';
-import profilePicture from '../../public/profile-picture.jpg';
+
 import socialIcons from './constants/socialIcons';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
+
 
 interface ContactData {
   title: string;
@@ -115,7 +117,7 @@ export default function Contact({ contactData: t }: { contactData: ContactData }
 
         <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
           <Avatar sx={{ width: 96, height: 96 }}>
-            <Image alt="Kelvin Sánchez" height={160} placeholder="blur" src={profilePicture} width={160} />
+            <Image alt="Raghu" height={160} placeholder="blur"  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/..." src="https://res.cloudinary.com/dhabhmp9t/image/upload/v1737799285/profile-picture_bsyuxu.jpg" width={160} />
           </Avatar>
         </Box>
 
